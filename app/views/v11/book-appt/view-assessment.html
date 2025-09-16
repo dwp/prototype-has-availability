@@ -34,16 +34,75 @@ Appointment details - GOV.UK prototype
           </legend>
 
           
-          {% if  data['apptbooked']   == 'cancelled' %}
+                    {% if  data['apptresched']   == 'resched' %}
 
-          <div class="govuk-inset-text">
-            You cannot change this appointment as it is a previous appointment</div>
-
-          
-          <br>
-
-          {% endif %} 
+         <h2 class="govuk-heading-m">
+          Appointment rescheduled
+          </h2>
     
+ <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               Reason for Reschedule
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {% if  data['appResched-other'] %}{{data['appResched-other'] }} {%else%} {{ data['appResched'] }}    {% endif %}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+          
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+              More detail
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {% if  data['resched-additional-details'] %}
+            {{ data['resched-additional-details'] }}
+           {% else %}
+           None
+           {% endif %}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+      Recorded
+              </dt>
+              <dd class="govuk-summary-list__value">
+              Wednesday 1 Oct 2025, 11:15am by David Young
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+    
+    
+    
+          
+      
+    
+          
+      
+          
+            
+            
+          </dl>
+
+       
+    
+          <h2 class="govuk-heading-m">
+         Details
+          </h2>   {% endif %} 
       
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
               <div class="govuk-summary-list__row">

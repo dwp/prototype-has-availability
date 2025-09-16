@@ -82,9 +82,9 @@ Success
                 <th scope="col" class="govuk-table__header govuk-table__header">Benefit</th>
 
                 <th scope="col" class="govuk-table__header govuk-table__header">Type</th>
-
+        <th scope="col" class="govuk-table__header govuk-table__header" style="width:20%;">Status</th>
                 <th scope="col" class="govuk-table__header govuk-table__header" >HCP</th>
-                <th scope="col" class="govuk-table__header govuk-table__header" style="width:20%;">Last update</th>
+        
        
 
                 <th scope="col" class="govuk-table__header govuk-table__header"></th>
@@ -96,12 +96,14 @@ Success
                   <td class="govuk-table__cell govuk-table__cell">	Birmingham, Handsworth</td>
                 <td class="govuk-table__cell govuk-table__cell">PIP</td> 
                 <td class="govuk-table__cell govuk-table__cell">Telephone</td>
-                <td class="govuk-table__cell govuk-table__cell"> {% if  data['hcp'] %}{{data['hcp'] }}  {% else %} Amy Gill  {% endif %}</td>
-         
+
                 <td class="govuk-table__cell govuk-table__cell"> {% if  data['cancelReason-other'] %}{{data['cancelReason-other'] }}  {% else %} {{ data['cancelReason'] }}  {% endif %} </th>
               
 
                 
+                  
+                <td class="govuk-table__cell govuk-table__cell"> {% if  data['hcp'] %}{{data['hcp'] }}  {% else %} Amy Gill  {% endif %}</td>
+         
 
                
 

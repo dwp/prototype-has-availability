@@ -19,7 +19,7 @@ Claimant appointments - GOV.UK prototype
 <div class="govuk-grid-row" style="margin-top: -40px;">
   <div class="govuk-grid-column-two-thirds">  
     
-    <a href="current-assessments" class="govuk-back-link" >Back</a>
+    <a href="appointments" class="govuk-back-link" >Back</a>
     <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
      
      
@@ -202,8 +202,13 @@ Appointment has been rescheduled
           </dt>
           <dd class="govuk-summary-list__value">
            
-          
+            {% if  data['select-hcp'] %}
             {{ data['select-hcp'] }}
+           {% else %}
+        Amy Gill
+           {% endif %}
+          
+      
           
            
            
@@ -252,7 +257,7 @@ Appointment has been rescheduled
            <p>  <a class="govuk-link" href="cancel-appointment">Cancel appointment</a> </p>
 
           
-           <p>  <a class="govuk-link" href="claimant-detail">Return to claimant details</a> </p> 
+           <p>  <a class="govuk-link" href="../book-appt/claimant-detail">Return to claimant details</a> </p> 
       
  
           </div>

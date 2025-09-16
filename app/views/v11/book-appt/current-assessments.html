@@ -75,9 +75,10 @@ Claimant appointments - GOV.UK prototype
                 <th scope="col" class="govuk-table__header govuk-table__header">Benefit</th>
 
                 <th scope="col" class="govuk-table__header govuk-table__header">Type</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header">Status</th>  
 
                 <th scope="col" class="govuk-table__header govuk-table__header">HCP</th>
-              <!--  <th scope="col" class="govuk-table__header govuk-table__header">Last update</th> -->
+
         
 
                 <th scope="col" class="govuk-table__header govuk-table__header"></th>
@@ -89,18 +90,17 @@ Claimant appointments - GOV.UK prototype
                   <td class="govuk-table__cell govuk-table__cell">Birmingham, Handsworth</td>
                 <td class="govuk-table__cell govuk-table__cell">PIP</td>
                 <td class="govuk-table__cell govuk-table__cell">Telephone</td>
-                <td class="govuk-table__cell govuk-table__cell" style="white-space:nowrap"> Amy Gill</td>
               
-             <!--   {% if  data['apptbooked']   == 'yes' %}
+              
+          {% if  data['apptresched']   == 'resched' %}
 
-                <td class="govuk-table__cell govuk-table__cell"> Booked</th>
-                {% else %} 
-                <td class="govuk-table__cell govuk-table__cell"> Cancelled</th>
-                {% endif %} 
+                <td class="govuk-table__cell govuk-table__cell"> Rescheduled</th>
+                      {% else %}
+                   <td class="govuk-table__cell govuk-table__cell"> Booked</th>
+                {% endif %} </td>
+                  <td class="govuk-table__cell govuk-table__cell" style="white-space:nowrap"> Amy Gill</td>
 
-                
-                -->
-               
+                  
 
                
                 <td class="govuk-table__cell govuk-table__cell"><a href="view-assessment"> Edit</a></td>
