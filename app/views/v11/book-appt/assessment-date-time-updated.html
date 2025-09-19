@@ -206,7 +206,12 @@ Appointment has been rescheduled
             {{ data['select-hcp'] }}
           
            
-           
+            {% if  data['select-hcp'] %}
+            {{ data['select-hcp'] }}
+           {% else %}
+          Amy Gill
+           {% endif %}
+
           
             
           </dd>
