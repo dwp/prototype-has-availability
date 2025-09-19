@@ -125,11 +125,13 @@ Cancel appointment - GOV.UK prototype
                 
                 
                 
-                  {% if  data['hcp'] %}
-                  {{ data['hcp'] }}
-                 {% else %}
-                 Amy Gill
-                 {% endif %}
+                  
+            {% if  data['select-hcp'] %}
+            {{ data['select-hcp'] }}
+           {% else %}
+          Amy Gill
+           {% endif %}
+
                  
                 
                   
