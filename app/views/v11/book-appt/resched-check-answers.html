@@ -26,7 +26,7 @@ Cancel appointment - GOV.UK prototype
 
     <form class="form" action="assessment-date-time-updated" method="post">
 
-      <h1 class="govuk-heading-l">Check appointment reschedule details</h1>
+      <h1 class="govuk-heading-l">Check new appointment details</h1>
 
 
        <div class="govuk-form-group">
@@ -98,7 +98,7 @@ Cancel appointment - GOV.UK prototype
               
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Date and time
+                 Date and time
                 </dt>
                 <dd class="govuk-summary-list__value">
                  Wed 7 Oct 2025, 11am
@@ -129,7 +129,7 @@ Cancel appointment - GOV.UK prototype
             {% if  data['select-hcp'] %}
             {{ data['select-hcp'] }}
            {% else %}
-          Amy Gill
+         Danny Zuko
            {% endif %}
 
                  
@@ -173,7 +173,7 @@ Cancel appointment - GOV.UK prototype
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-          Reschedule reason
+          Reason for rescheduling
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['appResched'] }}   
@@ -225,7 +225,7 @@ Cancel appointment - GOV.UK prototype
 
       <div class="govuk-button-group">
         <button class="govuk-button govuk-button" data-module="govuk-button">
-        Book appointment
+        Reschedule appointment
         </button>
 
        
