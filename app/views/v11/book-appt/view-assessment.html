@@ -37,13 +37,13 @@ Appointment details - GOV.UK prototype
                     {% if  data['apptresched']   == 'resched' %}
 
          <h2 class="govuk-heading-m">
-          Appointment rescheduled
+         Rescheduling details
           </h2>
     
  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-               Reason for Reschedule
+               Reason for rescheduling
               </dt>
               <dd class="govuk-summary-list__value">
                 {% if  data['appResched-other'] %}{{data['appResched-other'] }} {%else%} {{ data['appResched'] }}    {% endif %}
@@ -74,7 +74,7 @@ Appointment details - GOV.UK prototype
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-      Recorded
+      Actioned
               </dt>
               <dd class="govuk-summary-list__value">
               Wednesday 1 Oct 2025, 11:15am by David Young
@@ -101,13 +101,13 @@ Appointment details - GOV.UK prototype
        
     
           <h2 class="govuk-heading-m">
-         Details
+         Appointment
           </h2>   {% endif %} 
       
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Assessment centre
+                  Location
                 </dt>
                 <dd class="govuk-summary-list__value">
                   Birmingham, Handsworth
