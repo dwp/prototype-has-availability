@@ -29,7 +29,26 @@ Cancel appointment - GOV.UK prototype
       <h1 class="govuk-heading-l">Are you sure you want to cancel Jane Doe's appointment?</h1>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
+
+         <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+         Who needs to cancel
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['appt-reason-cancel'] }} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item">  <a class="govuk-link" href="cancel-cause">
+                    Change
+                </a></li>
+             
+            </ul>
+          </dd>
+        </div>
+
+
+          <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
            Reason for cancellation
           </dt>
@@ -45,6 +64,10 @@ Cancel appointment - GOV.UK prototype
             </ul>
           </dd>
         </div>
+    
+
+
+       
     
   
         <div class="govuk-summary-list__row">
@@ -78,6 +101,28 @@ Cancel appointment - GOV.UK prototype
       </dl>
 
      
+        {% if  data['appt-reason-cancel'] === 'Assessment provider' %}
+     
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="text-hint">
+  
+    <div id="text-hint" class="govuk-hint">
+     Only send a text if the claimant has not answered their phone after two tries.
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="text" name="text" type="checkbox" value="text-sent">
+        <label class="govuk-label govuk-checkboxes__label" for="text">
+        Send cancellation text to 0799 1234 567
+        </label>
+      </div>
+      
+   
+    </div>
+  </fieldset>
+</div>
+
+           {% endif %}
 
 
 
