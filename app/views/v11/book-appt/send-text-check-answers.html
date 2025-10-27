@@ -1,0 +1,130 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Cancel appointment - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-book-assessment.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+    <form class="form" action="view-appt-cancelled-text-sent" method="post">
+
+      <h1 class="govuk-heading-l">Are you sure you want to send a cancellation text to Jane Doe?</h1>
+
+      <p>Only send a text if the claimant has not answered their phone after two tries.</p>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+         <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+       Cancelled appointment
+          </dt>
+          <dd class="govuk-summary-list__value">
+         Wednesday, 22 October 2025 at 9:15am
+          </dd>
+        
+        </div>
+
+
+          <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+           Actioned
+          </dt>
+          <dd class="govuk-summary-list__value">
+       Wednesday, 22 October 2025 at 8:45am, by Nic Cat
+          </dd>
+         
+        </div>
+    
+
+
+       
+    
+  
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+         Number for text
+          </dt>
+          <dd class="govuk-summary-list__value">
+          0799 1234 567
+          </dd>
+          
+        </div>
+
+
+
+      
+  
+
+      
+  
+      
+        
+        
+      </dl>
+
+     
+     
+     
+        <div class="govuk-form-group" style="position: absolute; display: none;">
+  <fieldset class="govuk-fieldset" aria-describedby="text-hint">
+  
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="text" name="text" type="checkbox" value="text-sent" checked>
+        <label class="govuk-label govuk-checkboxes__label" for="text">
+        Send cancellation text to 0799 1234 567
+        </label>
+      </div>
+      
+   
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+         Send text
+        </button>
+
+       
+
+
+        <a class="govuk-link" href="view-appt-cancelled">Cancel</a>
+      </div>
+
+      <br>
+      <br>
+
+  </div>
+
+</div>
+
+</main>
+</div>
+
+
+
+
+{% endblock %}
+
