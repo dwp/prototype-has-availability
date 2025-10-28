@@ -898,3 +898,22 @@ router.post('/cancel-cause', function (req, res) {
 
 
 
+
+router.post('/cancel-cause2', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var apptreasoncancel = req.session.data['appt-reason-cancel']
+
+  // Check whether the variable matches a condition
+  if (apptreasoncancel == "Claimant"){
+    // Send user to what language page
+    res.redirect('/v11/has-manage-appt/claimant-cancel-appointment')
+  } else {
+    // Send user to next page
+    res.redirect('/v11/has-manage-appt/provider-cancel-appointment')
+  }
+
+})
+
+
+
