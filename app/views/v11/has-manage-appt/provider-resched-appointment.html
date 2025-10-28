@@ -1,0 +1,160 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Reschedule appointment - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-assessment-booked.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+    <form class="form" action="resched-check-answers" method="post">
+    <!--  <span class="govuk-caption-l">Wednesday 7 Oct 2025</span> -->
+
+      <h1 class="govuk-heading-l" style="padding-top:10px;">
+Reschedule Jane Doe's appointment
+      
+     
+      </h1>
+    
+      <h2 class="govuk-heading-m">What is the reason for rescheduling this appointment?</h2>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="reschedReason-1" name="reschedReason" type="radio" value="Admin error">
+              <label class="govuk-label govuk-radios__label" for="reschedReason-1">
+               Admin error
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="reschedReason-2" name="reschedReason" type="radio" value="Appointment no longer needed">
+              <label class="govuk-label govuk-radios__label" for="reschedReason-2">
+            Appointment no longer needed
+              </label>
+            </div>
+           
+          
+          <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="reschedReason-3" name="reschedReason" type="radio" value="HCP absent">
+              <label class="govuk-label govuk-radios__label" for="reschedReason-3">
+     HCP absent
+              </label>
+            </div>
+
+
+         <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="reschedReason-99" name="reschedReason" type="radio" value="HCP overbooked">
+              <label class="govuk-label govuk-radios__label" for="reschedReason-99">
+               HCP overbooked
+              </label>
+            </div> 
+
+
+           
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="reschedReason-4" name="reschedReason" type="radio" value="HCP overran">
+                <label class="govuk-label govuk-radios__label" for="reschedReason-4">
+               HCP overran
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="reschedReason-5" name="reschedReason" type="radio" value="Interpreter issues">
+                <label class="govuk-label govuk-radios__label" for="reschedReason-5">
+            Interpreter issues
+                </label>
+              </div>
+             
+            
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="reschedReason-6" name="reschedReason" type="radio" value=" Health Assessment Service failure">
+                <label class="govuk-label govuk-radios__label" for="reschedReason-6">
+              Health Assessment Service failure
+                </label>
+              </div>  
+           
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="reschedReason-10" name="reschedReason" type="radio" aria-controls="conditional-reschedReason" aria-expanded="true" value="Other">
+                
+                <label class="govuk-label govuk-radios__label" for="reschedReason">
+                  Other reason
+                </label>
+              </div>
+
+              <div class="govuk-radios__conditional" id="conditional-reschedReason">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="reschedReason-10">
+                    Reason for rescheduling
+                  </label>
+
+                  <input class="govuk-input govuk-!-width-one-half" id="reschedReason-other" name="reschedReason-other" type="text" value="" autocomplete="off">
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </fieldset>
+      </div>
+      
+
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="150">
+        <div class="govuk-form-group">
+          <label class="govuk-heading-s" for="action">
+            Can you provide more detail?
+          </label>
+    
+          <textarea class="govuk-textarea govuk-js-character-count" id="action" name="resched-additional-details" rows="3" aria-describedby="action-info"></textarea><div id="action-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 150 characters remaining</div>
+          
+          
+        </div>
+      </div>
+
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button govuk-button" data-module="govuk-button">
+   Continue
+        </button>
+
+
+
+        <a class="govuk-link" href="appt-details">Return to appointment details</a>
+      </div>
+
+      <br>
+      <br>
+
+  </div>
+
+</div>
+
+</main>
+</div>
+
+
+
+
+{% endblock %}
+

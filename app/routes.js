@@ -917,3 +917,39 @@ router.post('/cancel-cause2', function (req, res) {
 
 
 
+
+
+router.post('/resched-cause', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var apptreasonresched = req.session.data['appt-reason-resched']
+
+  // Check whether the variable matches a condition
+  if (apptreasonresched == "Claimant"){
+    // Send user to what language page
+    res.redirect('/v11/book-appt/claimant-resched-appointment')
+  } else {
+    // Send user to next page
+    res.redirect('/v11/book-appt/provider-resched-appointment')
+  }
+
+})
+
+
+
+
+router.post('/resched-cause2', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var apptreasonresched = req.session.data['appt-reason-resched']
+
+  // Check whether the variable matches a condition
+  if (apptreasonresched == "Claimant"){
+    // Send user to what language page
+    res.redirect('/v11/has-manage-appt/claimant-resched-appointment')
+  } else {
+    // Send user to next page
+    res.redirect('/v11/has-manage-appt/provider-resched-appointment')
+  }
+
+})

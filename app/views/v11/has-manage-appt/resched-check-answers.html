@@ -169,12 +169,31 @@ Cancel appointment - GOV.UK prototype
           <div>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
+
+         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-          Reschedule reason
+         Who needs to  reschedule
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['appResched'] }}   
+            {{ data['appt-reason-resched'] }}   
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item">  <a class="govuk-link" href="javascript:history.back()">
+                    Change
+                </a></li>
+             
+            </ul>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Reason for rescheduling
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['reschedReason'] }}   
           </dd>
           <dd class="govuk-summary-list__actions">
             <ul class="govuk-summary-list__actions-list">
