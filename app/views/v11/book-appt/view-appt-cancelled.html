@@ -68,7 +68,7 @@ Appointment details - GOV.UK prototype
                Reason for cancellation
               </dt>
               <dd class="govuk-summary-list__value">
-                {% if  data['cancelReason-other'] %}{{data['cancelReason-other'] }} {%else%} {{ data['cancelReason'] }}    {% endif %}
+                {% if  data['cancelReason-other'] %}{{data['cancelReason'] + ': ' + data['cancelReason-other'] }} {%else%}   {{ data['cancelReason'] }}      {% endif %}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -79,7 +79,7 @@ Appointment details - GOV.UK prototype
           
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-              More detail
+              More details
               </dt>
               <dd class="govuk-summary-list__value">
                 {% if  data['cancel-additional-details'] %}
@@ -99,7 +99,7 @@ Appointment details - GOV.UK prototype
       Actioned
               </dt>
               <dd class="govuk-summary-list__value">
-            Thursday 30 Sept 2025 at 10:30am, 11:15am by David Young
+            Thursday 30 September 2025 at 10:30am by David Young
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -116,7 +116,7 @@ Appointment details - GOV.UK prototype
 Cancellation text 
               </dt>
               <dd class="govuk-summary-list__value">
-          {% if  (data['text'] == "text-sent")  %}Sent to 0799 1234 567 on <br>Thursday 30 Sept 2025, 10:30am
+          {% if  (data['text'] == "text-sent")  %}Sent to 0799 1234 567 on <br>Thursday 30 September 2025 at 10:30am
  {% else %}
 
 
@@ -210,7 +210,7 @@ Cancellation text
                   Date and time
                 </dt>
                 <dd class="govuk-summary-list__value">
-                 Wed 7 May 2025, 11am
+                 Thursday 30 September 2025, 11am
                 </dd>
              
               </div>

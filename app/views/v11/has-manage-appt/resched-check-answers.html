@@ -40,7 +40,7 @@ Cancel appointment - GOV.UK prototype
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Assessment centre
+                  Location
                 </dt>
                 <dd class="govuk-summary-list__value">
                   Birmingham, Handsworth
@@ -101,7 +101,7 @@ Cancel appointment - GOV.UK prototype
                   Date and time
                 </dt>
                 <dd class="govuk-summary-list__value">
-                 Wed 7 Oct 2025, 11am
+                 Wednesday 7 October 2025, 11am
                 </dd>
               <dd class="govuk-summary-list__actions">
   <a class="govuk-link" href="resched-date-time">
@@ -172,7 +172,7 @@ Cancel appointment - GOV.UK prototype
 
          <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-         Who needs to  reschedule
+         Who rescheduled
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['appt-reason-resched'] }}   
@@ -193,7 +193,7 @@ Cancel appointment - GOV.UK prototype
           Reason for rescheduling
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['reschedReason'] }}   
+            {% if  data['reschedReason-other'] %}{{data['reschedReason'] + ': ' + data['reschedReason-other'] }} {%else%}   {{ data['reschedReason'] }}      {% endif %} 
           </dd>
           <dd class="govuk-summary-list__actions">
             <ul class="govuk-summary-list__actions-list">
@@ -208,7 +208,7 @@ Cancel appointment - GOV.UK prototype
   
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-          More detail
+          More details
           </dt>
           <dd class="govuk-summary-list__value">
             {% if  data['resched-additional-details'] %}
@@ -248,7 +248,7 @@ Reschedule appointment
        
 
 
-        <a class="govuk-link" href="view-assessment">Cancel</a>
+        <a class="govuk-link" href="view-assessment">Return to appointment details</a>
       </div>
 
       <br>
