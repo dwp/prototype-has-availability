@@ -25,11 +25,15 @@ Reschedule appointment - GOV.UK prototype
 <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
     <form class="form" action="resched-check-answers" method="post">
-     <!--span class="govuk-caption-l">Wednesday 7 Oct 2025</span-->
+    <!--  <span class="govuk-caption-l">Wednesday 7 Oct 2025</span> -->
 
- 
+      <h1 class="govuk-heading-l" style="padding-top:10px;">
+Reschedule Jane Doe's appointment
+      
+     
+      </h1>
     
-      <h1 class="govuk-heading-l" style="padding-top:10px;">What is the reason for rescheduling this appointment?</h1>
+      <h2 class="govuk-heading-m">What is the reason for rescheduling this appointment?</h2>
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
@@ -72,14 +76,6 @@ Reschedule appointment - GOV.UK prototype
                HCP overran
                 </label>
               </div>
-
-                 <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="reschedReason-6" name="reschedReason" type="radio" value=" Health Assessment Service failure">
-                <label class="govuk-label govuk-radios__label" for="reschedReason-6">
-              Health Assessment Service failed
-                </label>
-              </div>  
-              
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="reschedReason-5" name="reschedReason" type="radio" value="Interpreter issues">
                 <label class="govuk-label govuk-radios__label" for="reschedReason-5">
@@ -88,7 +84,12 @@ Reschedule appointment - GOV.UK prototype
               </div>
              
             
-           
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="reschedReason-6" name="reschedReason" type="radio" value=" Health Assessment Service failure">
+                <label class="govuk-label govuk-radios__label" for="reschedReason-6">
+              Health Assessment Service failure
+                </label>
+              </div>  
            
 
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -139,7 +140,7 @@ Reschedule appointment - GOV.UK prototype
 
 
 
-        <a class="govuk-link" href="view-assessment">Cancel</a>
+        <a class="govuk-link" href="view-assessment">Return to appointment details</a>
       </div>
 
       <br>
