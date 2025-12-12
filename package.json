@@ -10,10 +10,12 @@
     "@govuk-prototype-kit/step-by-step": "2.2.3",
     "@govuk-prototype-kit/task-list": "2.0.0",
     "axios": "^1.12.2",
+    "body-parser": "^2.2.1",
     "govuk-frontend": "5.11.1",
     "govuk-prototype-kit": "13.18.0",
     "hmrc-frontend": "6.78.0",
     "jquery": "3.7.1",
-    "notifications-node-client": "8.2.1"
+    "notifications-node-client": "8.2.1",
+    "path-to-regexp": "^8.3.0"
   }
 }
