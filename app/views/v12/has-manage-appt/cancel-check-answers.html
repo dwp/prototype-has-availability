@@ -1,0 +1,154 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Cancel appointment - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-book-assessment.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+    <form class="form" action="appointments-cancelled" method="post">
+
+      <h1 class="govuk-heading-l">Are you sure you want to cancel Jane Doe's appointment?</h1>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+         <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+         Who cancelled
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['appt-reason-cancel'] }} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item">  <a class="govuk-link" href="cancel-cause">
+                    Change
+                </a></li>
+             
+            </ul>
+          </dd>
+        </div>
+
+
+          <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+           Reason for cancellation
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['cancelReason'] }}   {% if  data['cancelReason-other'] %}{{': ' + data['cancelReason-other'] }}  {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item">  <a class="govuk-link" href="javascript:history.back()">
+                    Change
+                </a></li>
+             
+            </ul>
+          </dd>
+        </div>
+    
+
+
+       
+    
+  
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          More details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if  data['cancel-additional-details'] %}
+            {{ data['cancel-additional-details'] }}
+           {% else %}
+           None
+           {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              <span class="govuk-visually-hidden"> </span>
+            </a>
+          </dd>
+        </div>
+
+
+
+      
+  
+
+      
+  
+      
+        
+        
+      </dl>
+
+     
+        {% if  data['appt-reason-cancel'] === 'Assessment provider' %}
+     
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="text-hint">
+  
+    <div id="text-hint" class="govuk-hint">
+     Only send a text if the claimant has not answered their phone after two tries.
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="text" name="text" type="checkbox" value="text-sent">
+        <label class="govuk-label govuk-checkboxes__label" for="text">
+        Send cancellation text to 0799 1234 567
+        </label>
+      </div>
+      
+   
+    </div>
+  </fieldset>
+</div>
+
+           {% endif %}
+
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+         Yes, cancel appointment
+        </button>
+
+       
+
+
+        <a class="govuk-link" href="appt-details">Return to appointment details</a>
+      </div>
+
+      <br>
+      <br>
+
+  </div>
+
+</div>
+
+</main>
+</div>
+
+
+
+
+{% endblock %}
+

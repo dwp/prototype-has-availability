@@ -1,0 +1,303 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Appointment details - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-assessment-booked.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+    
+  
+    <a href="current-assessments-cancelled2" class="govuk-back-link">Back</a>
+    <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+     
+      
+      
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Appointment details
+            </h1>
+          </legend>
+
+
+
+      
+
+          <div class="govuk-inset-text">
+            You cannot change this appointment as it is a cancelled appointment</div>
+
+          
+          <br>
+          <h2 class="govuk-heading-m">
+         Cancellation details
+          </h2>
+  
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+             <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               Who cancelled 
+              </dt>
+              <dd class="govuk-summary-list__value">
+                 {{ data['appt-reason-cancel'] }} 
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               Reason for cancellation
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {% if  data['cancelReason-other'] %}{{data['cancelReason'] + ': ' + data['cancelReason-other'] }} {%else%}   {{ data['cancelReason'] }}      {% endif %}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+          
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+              More details
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {% if  data['cancel-additional-details'] %}
+                {{ data['cancel-additional-details'] }}
+               {% else %}
+               None
+               {% endif %}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+      Actioned
+              </dt>
+              <dd class="govuk-summary-list__value">
+            Thursday 30 September 2025 at 10:30am by David Young
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+    
+    
+  {% if  (data['appt-reason-cancel'] == "Assessment provider")  %}
+
+ <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+Cancellation text 
+              </dt>
+              <dd class="govuk-summary-list__value">
+          {% if  (data['text'] == "text-sent")  %}Sent to 0799 1234 567 on <br>Thursday 30 September 2025 at 10:30am
+ {% else %}
+
+
+                 Not sent
+          
+             {% endif %}  
+
+
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+           {% endif %}  
+ 
+    
+          
+      
+    
+          
+      
+          
+            
+            
+          </dl>
+    
+
+
+          
+          <h2 class="govuk-heading-m">
+           Appointment
+           </h2>
+    
+      
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Location
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Birmingham, Handsworth
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                    <span class="govuk-visually-hidden"> </span>
+                  </a>
+                </dd>
+              </div>
+          
+        
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Benefit
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  PIP
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="#">
+                    <span class="govuk-visually-hidden"> </span>
+                  </a>
+                </dd>
+              </div>
+  
+  
+  
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Appointment type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                
+                Telephone
+                 
+                 
+
+                  
+                </dd>
+              <!--  <dd class="govuk-summary-list__actions">
+                  {% if  data['apptbooked']   == 'yes' %}  <a class="govuk-link" href="assessment-channel">
+                    Change<span class="govuk-visually-hidden"> the appointment type</span>
+                  </a> {% endif %} 
+                </dd> -->
+              </div>
+            
+              
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Date and time
+                </dt>
+                <dd class="govuk-summary-list__value">
+                Wednesday 7 October 2025, 9:15am
+                </dd>
+             
+              </div>
+        
+  
+            
+        
+            
+              
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  HCP
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 
+                
+                
+              Amy Gill
+                 
+                
+                  
+                </dd>
+              
+  
+             <dd class="govuk-summary-list__actions">
+        
+                  
+                </dd> 
+              </div>
+  
+              
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Additional information
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  
+  None
+                </dd>
+            <dd class="govuk-summary-list__actions">
+                </dd>
+              </div>
+              
+            </dl>
+
+      
+          <div>
+
+          <p>  <a class="govuk-link" href="claimant-detail">Return to claimant details</a></p>
+        
+            
+          </div>
+      
+        </fieldset>
+      </div>
+      </div>
+
+
+    
+{% if data['appt-reason-cancel'] == "Assessment provider" and data['text'] != "text-sent" %}
+
+      <div class="govuk-grid-column-one-quarter" style="margin-top: 90px; 
+border-top: 2px solid #1d70b8; padding-left: 0px;">
+
+
+  <h3 class="govuk-heading-m" style="padding-top: 10px;">What you can do next</h3>
+
+     <ul class="govuk-list">
+         
+
+      <li class="govuk-!-margin-bottom-2"> <a class="govuk-link" href="send-text-check-answers">Send cancellation text</a> </li> 
+
+
+      
+
+
+     
+</ul>
+      
+
+
+        </div>         {% endif %}  
+
+
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,291 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Claimant appointments - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-assessment-booked.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">  
+    
+    <a href="appointments" class="govuk-back-link" >Back</a>
+    <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+     
+     
+      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+aria-labelledby="govuk-notification-banner-title"
+data-module="govuk-notification-banner">
+<div class="govuk-notification-banner__header">
+<h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+Success
+</h2>
+</div>
+<div class="govuk-notification-banner__content">
+<h3 class="govuk-notification-banner__heading">
+Appointment has been rescheduled
+</h3>
+</div>
+</div>
+
+     
+
+
+ 
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Appointment details
+      </h1>
+    </legend>
+<br>
+      <h2 class="govuk-heading-m">
+
+Rescheduling details
+
+          </h2>
+    
+ <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               Reason for rescheduling
+              </dt>
+              <dd class="govuk-summary-list__value">
+                 {% if  data['reschedReason-other'] %}{{data['reschedReason'] + ': ' + data['reschedReason-other'] }} {%else%}   {{ data['reschedReason'] }}      {% endif %} 
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+          
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+              More details
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {% if  data['resched-additional-details'] %}
+            {{ data['resched-additional-details'] }}
+           {% else %}
+           None
+           {% endif %}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+      Actioned
+              </dt>
+              <dd class="govuk-summary-list__value">
+              Wednesday 1 October 2025, 11:15am by David Young
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  <span class="govuk-visually-hidden"> </span>
+                </a>
+              </dd>
+            </div>
+    
+    
+    
+          
+      
+    
+          
+      
+          
+            
+            
+          </dl>
+
+<h2 class="govuk-heading-m">
+      Appointment
+          </h2>
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Birmingham, Handsworth
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              <span class="govuk-visually-hidden"> </span>
+            </a>
+          </dd>
+        </div>
+    
+  
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Benefit
+          </dt>
+          <dd class="govuk-summary-list__value">
+            PIP
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              <span class="govuk-visually-hidden"> </span>
+            </a>
+          </dd>
+        </div>
+
+     
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Appointment type
+          </dt>
+          <dd class="govuk-summary-list__value">
+          
+          
+            {% if  data['assessment-channel'] %}
+            {{ data['assessment-channel'] }}
+           {% else %}
+        Face to face
+           {% endif %}
+           
+           
+
+            
+          </dd>
+        <!--  <dd class="govuk-summary-list__actions">
+            {% if  data['apptbooked']   == 'yes' %}  <a class="govuk-link" href="assessment-channel">
+              Change<span class="govuk-visually-hidden"> the appointment type</span>
+            </a> {% endif %} 
+          </dd> -->
+        </div>
+      
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date and time
+          </dt>
+          <dd class="govuk-summary-list__value">
+           Wednesday 7 October 2025, 11am
+          </dd>
+           <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="resched-date-time">
+              Change<span class="govuk-visually-hidden">appointment date and time</span>
+            </a>
+           
+          </dd> 
+        </div>
+  
+
+      
+  
+      
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            HCP
+          </dt>
+          <dd class="govuk-summary-list__value">
+           
+            {% if  data['select-hcp'] %}
+            {{ data['select-hcp'] }}
+           {% else %}
+        Amy Gill
+           {% endif %}
+          
+      
+          
+           
+           
+          
+            
+          </dd>
+        
+
+       <dd class="govuk-summary-list__actions">
+           <a class="govuk-link" href="edit-hcp-post-booking">
+              Change<span class="govuk-visually-hidden"> any additional information</span>
+            </a>
+          
+          </dd> 
+        </div>
+
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Additional information
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+
+            {% if  data['more-detail'] %}
+            {{ data['more-detail'] }}
+           {% else %}
+           None
+           {% endif %}
+
+          </dd>
+      <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+        
+      </dl>
+
+
+    <div>
+     
+
+          </div>
+
+
+         
+    </div>
+
+  </fieldset>
+</div>
+
+
+<div class="govuk-grid-column-one-third">
+  <h3 class="govuk-heading-m">What you can do next</h3>
+
+     <ul class="govuk-list">
+         
+
+      <li class="govuk-!-margin-bottom-2"> <a class="govuk-link" href="outcome-appointment">Record appointment outcome</a> </li> 
+
+
+      <li class="govuk-!-margin-bottom-2"> <a class="govuk-link" href="../book-appt/cancel-cause">Cancel appointment</a>  </li> 
+
+
+
+      <li class="govuk-!-margin-bottom-2">  <a class="govuk-link" href="../book-appt/claimant-detail">Return to claimant details</a>  </li> 
+
+</ul>
+      
+ 
+
+        </div>
+</div>
+</div>
+</main>
+</div>
+
+
+{% endblock %}
