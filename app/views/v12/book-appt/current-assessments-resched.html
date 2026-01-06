@@ -47,30 +47,61 @@ Appointment has been rescheduled
             Jane Doe's appointments
             </h1>
 
-      {% if  data['apptbooked']   == 'cancelled' %}
-         
-         <p>There are no current appointments.</p>
-
-  
-            {% endif %} 
-            
-            
-            {% if  data['apptbooked']   == 'yes' %}
+     
             <h2 class="govuk-heading-m">
 
               
               Current appointments
             </h2>
-            {% endif %} 
-         
           
+            <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" style="width:25%;">   Date and time</th>
+                <th scope="col" class="govuk-table__header govuk-table__header" style="width:10%;">Location</th>
+                <th scope="col" class="govuk-table__header govuk-table__header">Benefit</th>
+
+                <th scope="col" class="govuk-table__header govuk-table__header">Type</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header">Last update</th>  
+
+                <th scope="col" class="govuk-table__header govuk-table__header">HCP</th>
+
+        
+
+                <th scope="col" class="govuk-table__header govuk-table__header"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell">Wed 7 Oct 2025, 9:15am</td>
+                  <td class="govuk-table__cell govuk-table__cell">Birmingham, Handsworth</td>
+                <td class="govuk-table__cell govuk-table__cell">PIP</td>
+                <td class="govuk-table__cell govuk-table__cell">Telephone</td>
+              
+              
+          {% if  data['apptresched']   == 'resched' %}
+
+                <td class="govuk-table__cell govuk-table__cell"> Rescheduled</th>
+                      {% else %}
+                   <td class="govuk-table__cell govuk-table__cell"> Booked</th>
+                {% endif %} </td>
+                  <td class="govuk-table__cell govuk-table__cell" style="white-space:nowrap"> Danny Zuko</td>
+
+                  
+
                
-          {% if  data['apptbooked']   == 'cancelled' %}
+                <td class="govuk-table__cell govuk-table__cell"><a href="appointment-rebooked"> Edit</a></td>
+              </tr>
+            
+            </tbody>
+          </table>
+               
+        
           <h2 class="govuk-heading-m">
 
            Previous appointments
           </h2>
-          {% endif %} 
+
         </legend>
         
         
@@ -111,7 +142,7 @@ Appointment has been rescheduled
                   
 
                
-                <td class="govuk-table__cell govuk-table__cell"><a href="assessment-date-time-updated"> Edit</a></td>
+                <td class="govuk-table__cell govuk-table__cell"><a href="assessment-date-time-updated"> View</a></td>
               </tr>
             
             </tbody>

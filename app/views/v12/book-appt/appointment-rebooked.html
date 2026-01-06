@@ -37,71 +37,8 @@ Claimant appointments - GOV.UK prototype
       </h1>
     </legend>
 <br>
-      <h2 class="govuk-heading-m">
-          Rescheduling details
-          </h2>
     
- <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-               Reason for rescheduling
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {% if  data['reschedReason-other'] %}{{data['reschedReason'] + ': ' + data['reschedReason-other'] }} {%else%}   {{ data['reschedReason'] }}      {% endif %}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  <span class="govuk-visually-hidden"> </span>
-                </a>
-              </dd>
-            </div>
-          
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-              More details
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {% if  data['resched-additional-details'] %}
-            {{ data['resched-additional-details'] }}
-           {% else %}
-           None
-           {% endif %}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  <span class="govuk-visually-hidden"> </span>
-                </a>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-    Actioned
-              </dt>
-              <dd class="govuk-summary-list__value">
-              Wednesday 1 October 2025, 11:15am by David Young
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
-                  <span class="govuk-visually-hidden"> </span>
-                </a>
-              </dd>
-            </div>
-    
-    
-    
-          
-      
-    
-          
-      
-          
-            
-            
-          </dl>
 
-<h2 class="govuk-heading-m">
-         Appointment
-          </h2>
 
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -171,9 +108,9 @@ Claimant appointments - GOV.UK prototype
            Wednesday 7 October 2025, 9:15am
           </dd>
            <dd class="govuk-summary-list__actions">
-            <!--a class="govuk-link" href="resched-date-time">
+            <a class="govuk-link" href="resched-date-time">
               Change<span class="govuk-visually-hidden">appointment date and time</span>
-            </a-->
+            </a>
            
           </dd> 
         </div>
@@ -196,7 +133,7 @@ Claimant appointments - GOV.UK prototype
             {% if  data['select-hcp'] %}
             {{ data['select-hcp'] }}
            {% else %}
-          Amy Gill
+         Danny Zuko
            {% endif %}
 
           
@@ -205,9 +142,9 @@ Claimant appointments - GOV.UK prototype
         
 
        <dd class="govuk-summary-list__actions">
-           <!--a class="govuk-link" href="edit-hcp-post-booking">
+           <a class="govuk-link" href="edit-hcp-post-booking">
               Change<span class="govuk-visually-hidden"> any additional information</span>
-            </a-->
+            </a>
           
           </dd> 
         </div>
@@ -256,9 +193,9 @@ border-top: 2px solid #1d70b8; padding-left: 0px;">
      <ul class="govuk-list">
          
 
-      <!--li class="govuk-!-margin-bottom-2">  <a class="govuk-link" href="outcome-appointment">Record appointment outcome</a> </li>
+      <!--li class="govuk-!-margin-bottom-2">  <a class="govuk-link" href="outcome-appointment">Record appointment outcome</a> </li-->
 
-          <li class="govuk-!-margin-bottom-2">   <a class="govuk-link" href="../book-appt/cancel-cause">Cancel appointment</a> </li-->
+          <li class="govuk-!-margin-bottom-2">   <a class="govuk-link" href="../book-appt/cancel-cause">Cancel appointment</a> </li>
 
           
            <li class="govuk-!-margin-bottom-2">   <a class="govuk-link" href="claimant-detail">Return to claimant details</a> </li>
