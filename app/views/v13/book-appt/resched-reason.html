@@ -1,0 +1,216 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Cancel appointment - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-assessment-booked.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+    <form class="form" action="resched-check-answers" method="post">
+     <!--  <span class="govuk-caption-l">Wednesday 7 May 2025</span> -->
+
+      <h1 class="govuk-heading-l" style="padding-top:10px;">
+   What is the reason for Jane Doe rescheduling this appointment?
+      
+     
+      </h1>
+    
+      
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="appResched-1" name="appResched" type="radio" value="Claimant has another appointment">
+              <label class="govuk-label govuk-radios__label" for="appResched-1">
+       Claimant has another appointment
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+
+
+              <input class="govuk-radios__input" id="appResched-2" name="appResched" type="radio" value=" Support person is not available">
+              <label class="govuk-label govuk-radios__label" for="appResched-2">
+               Support person is not available
+              </label>
+            </div>
+           
+     
+
+
+        <div class="govuk-radios__item">
+
+              <input class="govuk-radios__input" id="appResched-3" name="appResched" type="radio" value="No reason given">
+              <label class="govuk-label govuk-radios__label" for="appResched-3">
+          No reason given
+
+              </label>
+            </div> 
+
+             <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="appResched-4" name="appResched" type="radio" value="Claimant is ill, undergoing treatment or recovering from treatment">
+
+
+              <label class="govuk-label govuk-radios__label" for="appResched-4">
+
+
+        Claimant is ill, undergoing treatment or recovering from treatment
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="appResched-5" name="appResched" type="radio" value="Claimant cannot miss work, school or university">
+
+
+              <label class="govuk-label govuk-radios__label" for="appResched-5">
+
+
+              Claimant cannot miss work, school or university
+              </label>
+            </div>
+           
+     
+
+
+        <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="appResched-6" name="appResched" type="radio" value="Claimant is not currently at home address">
+
+
+              <label class="govuk-label govuk-radios__label" for="appResched-6">
+
+
+            Claimant is not currently at home address
+              </label>
+            </div> 
+
+             <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="appResched-7" name="appResched" type="radio" value="Claimant has care or family commitments">
+
+              <label class="govuk-label govuk-radios__label" for="appResched-7">
+
+
+        Claimant has care or family commitments
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="appResched-8" name="appResched" type="radio" value="Appointee is not available">
+
+
+              <label class="govuk-label govuk-radios__label" for="appResched-8">
+
+              Appointee is not available
+              </label>
+            </div>
+           
+     
+
+
+        <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="appResched-9" name="appResched" type="radio" value="Different appointment type needed">
+
+
+              <label class="govuk-label govuk-radios__label" for="appResched-9">
+
+
+            Different appointment type needed 
+              </label>
+            </div>          
+
+   <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="appResched-11" name="appResched" type="radio" aria-controls="conditional-appResched" aria-expanded="true" value="Reason other">
+                
+                <label class="govuk-label govuk-radios__label" for="appResched">
+                 Other reason
+                </label>
+              </div>
+
+              <div class="govuk-radios__conditional" id="conditional-appResched">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="appResched-11">
+                    Reason for reschedule
+                  </label>
+
+                  <input class="govuk-input govuk-!-width-one-half" id="appResched-other" name="appResched-other" type="text" value="" autocomplete="off">
+                </div>
+              </div>
+            </div> 
+
+
+          </div>
+        </fieldset>
+      </div>
+      
+
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
+        <div class="govuk-form-group">
+          <label class="govuk-heading-s" for="action">
+            Provide more details for this rescheduling
+          </label>
+    
+          <textarea class="govuk-textarea govuk-js-character-count" id="action" name="resched-additional-details" rows="3" aria-describedby="action-info"></textarea><div id="action-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 250 characters remaining</div>
+          
+          
+        </div>
+      </div>
+
+
+    <div class="hidden-radio-post">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="apptresched" name="apptresched" type="radio" value="resched" {{ checked('apptresched', 'resched') }} checked>
+
+              <label class="govuk-label govuk-radios__label" for="apptresched">
+                Hidden radio = Appointment rescheduled
+              </label>
+            </div>
+          </div>
+     </div>
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button govuk-button" data-module="govuk-button">
+       Continue
+        </button>
+
+
+
+        <a class="govuk-link" href="view-assessment">Return to appointment details</a>
+      </div>
+
+      <br>
+      <br>
+
+  </div>
+
+</div>
+
+</main>
+</div>
+
+
+
+
+{% endblock %}
+

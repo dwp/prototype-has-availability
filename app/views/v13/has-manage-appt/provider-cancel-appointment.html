@@ -25,88 +25,74 @@ Cancel appointment - GOV.UK prototype
 <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
     <form class="form" action="cancel-check-answers" method="post">
-      <span class="govuk-caption-l">Wednesday 7 October 2025</span>
+      <span class="govuk-caption-l">Wednesday 7 Oct 2025</span>
 
+      <h1 class="govuk-heading-l" style="padding-top:10px;">
+       Cancel Jane Doe's appointment
+      
+     
+      </h1>
     
-    
-      <h1 class="govuk-heading-l" style="padding-top:10px;">What is the reason for Jane Doe cancelling this appointment?</h1>
+      <h2 class="govuk-heading-m">What is the reason for cancelling this appointment?</h2>
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="cancelReason-1" name="cancelReason" type="radio" value="Appointment no longer needed">
+              <input class="govuk-radios__input" id="cancelReason-1" name="cancelReason" type="radio" value="Admin error">
               <label class="govuk-label govuk-radios__label" for="cancelReason-1">
-            Appointment no longer needed
+               Admin error
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="cancelReason-2" name="cancelReason" type="radio" value="Claimant has another appointment booked">
+              <input class="govuk-radios__input" id="cancelReason-2" name="cancelReason" type="radio" value="Appointment no longer needed">
               <label class="govuk-label govuk-radios__label" for="cancelReason-2">
-            Claimant has another appointment booked 
+            Appointment no longer needed
               </label>
             </div>
            
           
-       <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="cancelReason-3" name="cancelReason" type="radio" value="Support person is not available">
+          <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="cancelReason-3" name="cancelReason" type="radio" value="HCP absent">
               <label class="govuk-label govuk-radios__label" for="cancelReason-3">
-            Support person is not available 
+     HCP absent
+              </label>
+            </div>
+
+
+         <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="cancelReason-99" name="cancelReason" type="radio" value="HCP overbooked">
+              <label class="govuk-label govuk-radios__label" for="cancelReason-99">
+               HCP overbooked
               </label>
             </div> 
 
 
-       <!--    <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="cancelReason-99" name="cancelReason" type="radio" value="No reason given">
-              <label class="govuk-label govuk-radios__label" for="cancelReason-99">
-               No reason given 
-              </label>
-            </div> -->
-
-
            
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="cancelReason-4" name="cancelReason" type="radio" value="Claimant is ill, undergoing treatment or recovering from treatment">
+                <input class="govuk-radios__input" id="cancelReason-4" name="cancelReason" type="radio" value="HCP overran">
                 <label class="govuk-label govuk-radios__label" for="cancelReason-4">
-       Claimant is ill, undergoing treatment or recovering from treatment
+               HCP overran
                 </label>
               </div>
+                  <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="cancelReason-6" name="cancelReason" type="radio" value=" Health Assessment Service failure">
+                <label class="govuk-label govuk-radios__label" for="cancelReason-6">
+              Health Assessment Service failed
+                </label>
+              </div>  
+
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="cancelReason-5" name="cancelReason" type="radio" value="Claimant cannot miss work, school or university">
+                <input class="govuk-radios__input" id="cancelReason-5" name="cancelReason" type="radio" value="Interpreter issues">
                 <label class="govuk-label govuk-radios__label" for="cancelReason-5">
-  Claimant cannot miss work, school or university
+            Interpreter issues
                 </label>
               </div>
              
             
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="cancelReason-6" name="cancelReason" type="radio" value="Claimant is not currently at home address">
-                <label class="govuk-label govuk-radios__label" for="cancelReason-6">
-        Claimant is not currently at home address
-                </label>
-              </div>  
-           <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="cancelReason-8" name="cancelReason" type="radio" value="Claimant has care or family commitments">
-                  <label class="govuk-label govuk-radios__label" for="cancelReason-8">
-   Claimant has care or family commitments
-                  </label>
-                </div> 
-               
-              
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="cancelReason-9" name="cancelReason" type="radio" value="Appointee is not available">
-                  <label class="govuk-label govuk-radios__label" for="cancelReason-9">
-      Appointee is not available
-                  </label>
-                </div>
-
-                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="cancelReason-11" name="cancelReason" type="radio" value="Different appointment type needed">
-                  <label class="govuk-label govuk-radios__label" for="cancelReason-11">
-  Different appointment type needed
-                  </label>
-                </div>
+          
+           
 
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
@@ -138,7 +124,7 @@ Cancel appointment - GOV.UK prototype
       <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
         <div class="govuk-form-group">
           <label class="govuk-heading-s" for="action">
-            Provide more details for this cancellation
+           Provide more details for this cancellation
           </label>
     
           <textarea class="govuk-textarea govuk-js-character-count" id="action" name="cancel-additional-details" rows="3" aria-describedby="action-info"></textarea><div id="action-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 250 characters remaining</div>
@@ -156,7 +142,7 @@ Cancel appointment - GOV.UK prototype
 
 
 
-        <a class="govuk-link" href="view-appt02">Return to appointment details</a>
+        <a class="govuk-link" href="appt-details">Return to appointment details</a>
       </div>
 
       <br>

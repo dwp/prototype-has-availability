@@ -1106,3 +1106,172 @@ router.post('/resched-cause12b', function (req, res) {
   }
 
 })
+
+
+
+/////
+//v13
+router.post('/manage-what13', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var manage = req.session.data['manage']
+
+  // Check whether the variable matches a condition
+  if (manage == "agents"){
+    // Send user to what language page
+    res.redirect('/v13/availability-management/agents/agent-profiles')
+  } else {
+    // Send user to next page
+    res.redirect('/v13/availability-management/availability/availability-view')
+  }
+
+})
+
+
+
+router.post('/status-check13', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var status = req.session.data['status']
+
+  // Check whether the variable matches a condition
+  if (status == "assessment-booked"){
+    // Send user to what language page
+    res.redirect('/v13/book-appt/update-status-assessment-booked')
+  } else {
+    // Send user to next page
+    res.redirect('/v13/book-appt/update-status-confirmation')
+  }
+
+})
+
+
+
+
+router.post('/select-hcp13', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var selectagent = req.session.data['select-agent']
+
+  // Check whether the variable matches a condition
+  if (selectagent == "choose-hcp"){
+    // Send user to what language page
+    res.redirect('/v13/book-appt/assign-hcp-while-booking')
+  } else {
+    // Send user to next page
+    res.redirect('/v13/book-appt/more-info')
+  }
+
+})
+
+
+
+router.post('/select-hcp13-manage', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var selectagent = req.session.data['select-agent']
+
+  // Check whether the variable matches a condition
+  if (selectagent == "choose-hcp"){
+    // Send user to what language page
+    res.redirect('/v13/has-manage-appt/assign-hcp-while-booking')
+  } else {
+    // Send user to next page
+    res.redirect('/v13/has-manage-appt/appt-details-change-hcp')
+  }
+
+})
+
+
+
+router.post('/cancel-cause13', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var apptreasoncancel = req.session.data['appt-reason-cancel']
+
+  // Check whether the variable matches a condition
+  if (apptreasoncancel == "Claimant"){
+    // Send user to what language page
+    res.redirect('/v13/book-appt/claimant-cancel-appointment')
+  } else {
+    // Send user to next page
+    res.redirect('/v13/book-appt/provider-cancel-appointment')
+  }
+
+})
+
+
+
+
+router.post('/cancel-cause13', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var apptreasoncancel = req.session.data['appt-reason-cancel']
+
+  // Check whether the variable matches a condition
+  if (apptreasoncancel == "Claimant"){
+    // Send user to what language page
+    res.redirect('/v13/has-manage-appt/claimant-cancel-appointment')
+  } else {
+    // Send user to next page
+    res.redirect('/v13/has-manage-appt/provider-cancel-appointment')
+  }
+
+})
+
+
+
+
+
+router.post('/resched-cause13', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var apptreasonresched = req.session.data['appt-reason-resched']
+
+  // Check whether the variable matches a condition
+  if (apptreasonresched == "Claimant"){
+    // Send user to what language page
+    res.redirect('/v13/book-appt/claimant-resched-appointment')
+  } else {
+    // Send user to next page
+    res.redirect('/v13/book-appt/provider-resched-appointment')
+  }
+
+})
+
+
+
+
+router.post('/resched-cause13b', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var apptreasonresched = req.session.data['appt-reason-resched']
+
+  // Check whether the variable matches a condition
+  if (apptreasonresched == "Claimant"){
+    // Send user to what language page
+    res.redirect('/v13/has-manage-appt/claimant-resched-appointment')
+  } else {
+    // Send user to next page
+    res.redirect('/v13/has-manage-appt/provider-resched-appointment')
+  }
+
+})
+
+
+
+router.post('/appt-flexi-check13', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var apptflexicheck = req.session.data['appt-flexi-check']
+
+  // Check whether the variable matches a condition
+  if (apptflexicheck == "Flexible appointment"){
+    // Send user to what language page
+    res.redirect('/v13/book-appt/appointmentflexi-duration')
+  } else {
+    // Send user to next page
+    res.redirect('/v13/book-appt/app-date-time')
+  }
+
+})
