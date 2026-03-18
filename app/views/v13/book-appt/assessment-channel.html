@@ -23,13 +23,13 @@ Appointment type - GOV.UK prototype
 
   <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
 
-        <form class="form" action="appointmentflexi-type" method="post">
+        <form class="form" action="appointmentflexi-duration" method="post">
 
           {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
           {{ govukRadios({
-            idPrefix: "assessment-channel",
-            name: "assessment-channel",
+            idPrefix: "appt-flexi-check",
+            name: "appt-flexi-check",
             fieldset: {
               legend: {
                 text: "What is the appointment type?",

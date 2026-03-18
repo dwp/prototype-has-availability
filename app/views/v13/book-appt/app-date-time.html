@@ -72,22 +72,7 @@ Date and time - GOV.UK prototype
                 
               </div>
             
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key key-chooseDateTime-channel" style="width: 50%;">
-                  Appointment type
-                </dt>
-                <dd class="govuk-summary-list__value val-chooseDateTime-channel">
-                
-
-
-                  {% if  data['assessment-channel'] %}
-                  {{ data['assessment-channel'] }}
-                 {% else %}
-                  Telephone
-                 {% endif %}
-                </dd>
-                
-              </div>
+           
 
              
 
@@ -102,27 +87,31 @@ Date and time - GOV.UK prototype
                   {% if  data['appt-flexi-check'] %}
                   {{ data['appt-flexi-check'] }}
                  {% else %}
-                 PIP Appointment new claim
+                 Telephone
                  {% endif %}
                 </dd>
                 
               </div>
 
-       {% if data['appt-flexi-check'] != 'PIP Appointment new claim' %}
+     
                 <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key key-chooseDateTime-channel" style="width: 50%;">
                  Appointment duration
                 </dt>
                 <dd class="govuk-summary-list__value val-chooseDateTime-channel">
                 
-
-               {{ data['assessment-duration'] }}
+ {% if  data['assessment-duration'] %}
+                  {{ data['assessment-duration'] }}
+                 {% else %}
+                2 hours
+                 {% endif %}
+        
                
                 
               
                 </dd>
                 
-              </div>   {% endif %}
+              </div>   
 
             <!--  <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key key-chooseDateTime-channel">

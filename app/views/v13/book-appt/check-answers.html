@@ -109,16 +109,19 @@ Check appointment details - GOV.UK prototype
 
             
 
+         
+
+
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Appointment type
               </dt>
               <dd class="govuk-summary-list__value">
-                {% if  data['assessment-channel'] %}
-                {{ data['assessment-channel'] }}
-               {% else %}
-                Telephone
-               {% endif %}
+                  {% if  data['appt-flexi-check'] %}
+                  {{ data['appt-flexi-check'] }}
+                 {% else %}
+                 Telephone
+                 {% endif %}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="assessment-channel">
@@ -127,28 +130,17 @@ Check appointment details - GOV.UK prototype
               </dd>
             </div>
 
-
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Appointment type
-              </dt>
-              <dd class="govuk-summary-list__value">
-                 {{ data['appt-flexi-check'] }}
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="appointmentflexi-type">
-                  Change<span class="govuk-visually-hidden"> the appointment type</span>
-                </a>
-              </dd>
-            </div>
-
-       {% if data['appt-flexi-check'] != 'PIP Appointment new claim' %}
+        
               <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
                 Appointment duration
               </dt>
               <dd class="govuk-summary-list__value">
-                 {{ data['assessment-duration'] }}
+                {% if  data['assessment-duration'] %}
+                  {{ data['assessment-duration'] }}
+                 {% else %}
+                2 hours
+                 {% endif %}
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="appointmentflexi-duration">
@@ -156,7 +148,7 @@ Check appointment details - GOV.UK prototype
                 </a>
               </dd>
             </div>
- {% endif %}
+
            
             
             <div class="govuk-summary-list__row">
