@@ -30,9 +30,23 @@ Additional information - GOV.UK prototype
       Additional information
     </label>
   </h1>
+  
+
+
   <label class="govuk-label" for="event-name">
-    Add any useful information to support the appointment
+  {% if  (data['assessment-duration']   == '1 hour') or (data['assessment-duration']   == '45 minutes') or (data['assessment-duration']   == '30 minutes') or (data['assessment-duration']   == '15 minutes') %}
+  
+Tell us the reason for selecting a shorter appointment
+
+
+       {% else %}
+
+Add any useful information to support the appointment
+
+     {% endif %}
   </label>
+
+
   <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
 
 </div>
