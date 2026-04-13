@@ -99,7 +99,7 @@ Appointment details - GOV.UK prototype
       Actioned
               </dt>
               <dd class="govuk-summary-list__value">
-            Thursday 30 September 2025 at 10:30am by David Young
+            Thursday 30 April 2026 at 10:30am by David Young
               </dd>
               <dd class="govuk-summary-list__actions">
                 <a class="govuk-link" href="#">
@@ -109,7 +109,7 @@ Appointment details - GOV.UK prototype
             </div>
     
     
-  {% if  (data['appt-reason-cancel'] == "Assessment provider")  %}
+ <!--  {% if  (data['appt-reason-cancel'] == "Assessment provider")  %}
 
  <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
@@ -122,7 +122,7 @@ Cancellation text
 
                  Not sent
           
-             {% endif %}  
+             {% endif %}   
 
 
               </dd>
@@ -133,7 +133,7 @@ Cancellation text
               </dd>
             </div>
            {% endif %}  
- 
+           -->
     
           
       
@@ -203,6 +203,24 @@ Cancellation text
                   </a> {% endif %} 
                 </dd> -->
               </div>
+
+                <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Appointment duration
+          </dt>
+          <dd class="govuk-summary-list__value">
+          
+          
+           2 hours 
+           
+           
+
+            
+          </dd>
+       
+
+        </div>
+
             
               
               <div class="govuk-summary-list__row">
@@ -210,7 +228,7 @@ Cancellation text
                   Date and time
                 </dt>
                 <dd class="govuk-summary-list__value">
-                Wednesday 7 October 2025, 9:15am
+                Wednesday 7 May 2026, 9:15am
                 </dd>
              
               </div>
@@ -259,7 +277,6 @@ Cancellation text
       
           <div>
 
-          <p>  <a class="govuk-link" href="claimant-detail">Return to claimant details</a></p>
         
             
           </div>
@@ -269,8 +286,8 @@ Cancellation text
       </div>
 
 
-    
-{% if data['appt-reason-cancel'] == "Assessment provider" and data['text'] != "text-sent" %}
+ 
+
 
       <div class="govuk-grid-column-one-quarter" style="margin-top: 90px; 
 border-top: 2px solid #1d70b8; padding-left: 0px;">
@@ -281,9 +298,8 @@ border-top: 2px solid #1d70b8; padding-left: 0px;">
      <ul class="govuk-list">
          
 
-      <li class="govuk-!-margin-bottom-2"> <a class="govuk-link" href="send-text-check-answers">Send cancellation text</a> </li> 
-
-
+      <li class="govuk-!-margin-bottom-2"> <a class="govuk-link" href="claimant-detail">Return to claimant details</a></li>
+        
       
 
 
@@ -292,9 +308,9 @@ border-top: 2px solid #1d70b8; padding-left: 0px;">
       
 
 
-        </div>         {% endif %}  
+        </div>     
 
-
+      
     </div>
   </main>
 </div>
