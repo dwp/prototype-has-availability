@@ -28,23 +28,49 @@ Appointment type - GOV.UK prototype
           {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
           {{ govukRadios({
-            idPrefix: "appt-flexi-check",
-            name: "appt-flexi-check",
+            idPrefix: "assessment-duration",
+            name: "assessment-duration",
             fieldset: {
               legend: {
-                text: "What is the appointment type?",
+                text: "Select appointment duration",
                 isPageHeading: true,
                 classes: "govuk-fieldset__legend--l"
               }
             },
             items: [
               {
-                value: "Face to face",
-                text: "Face to face"
+                value: "15 minutes",
+                text: "15 minutes"
               },
               {
-                value: "Telephone",
-                text: "Telephone"
+                value: "30 minutes",
+                text: "30 minutes"
+              }
+            ,
+              {
+                value: "45 minutes",
+                text: "45 minutes"
+              },
+              {
+                value: "1 hour",
+                text: "1 hour"
+              },
+              {
+                value: "1 hour 30 minutes",
+                text: "1 hour 30 minutes"
+              },
+              {
+                value: "2 hours",
+                text: "2 hours"
+              },
+              {
+               value: "2 hours 30 minutes",
+                text: "2 hours 30 minutes"
+              },
+             
+              {
+                value: "3 hours",
+                text: "3 hours"
               }
             ]
           }) }}
