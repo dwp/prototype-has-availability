@@ -1,15 +1,12 @@
 {
-  
   "engines": {
     "node": "22.x",
     "npm": "10.x"
   },
-
   "scripts": {
     "dev": "govuk-prototype-kit dev",
     "serve": "govuk-prototype-kit serve",
     "start": "govuk-prototype-kit start"
-
   },
   "dependencies": {
     "22": "^0.0.0",
@@ -18,7 +15,7 @@
     "@govuk-prototype-kit/step-by-step": "2.2.3",
     "@x-govuk/govuk-prototype-filters": "^2.1.0",
     "govuk-frontend": "5.14.0",
-    "govuk-prototype-kit": "13.19.1"
+    "@dwp-govuk/govuk-prototype-kit": "latest"
   },
   "overrides": {
     "qs": "6.14.2",
