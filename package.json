@@ -9,6 +9,11 @@
     "serve": "govuk-prototype-kit serve",
     "start": "govuk-prototype-kit start"
   },
+  "overrides": {
+    "immutable": "^5.1.5",
+    "brace-expansion": "^5.0.8",
+    "minimatch": "^10.0.1"
+  },
   "dependencies": {
     "22": "^0.0.0",
     "@govuk-prototype-kit/common-templates": "3.0.0",
