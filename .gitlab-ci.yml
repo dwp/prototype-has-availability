@@ -22,7 +22,6 @@ heroku-site-publish:
   variables:
     HEROKU_APP_NAME: prototype-has-availability
 
-
 install-dependencies:
   image: node:18
   stage: build
