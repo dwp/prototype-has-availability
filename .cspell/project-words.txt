@@ -1,22 +1,5 @@
-#   myproject
-#   myproject-feature
 # add project specific words here, one word per line
 # e.g.:
-Jogunoori
-alessandrojcm
-appointmentsv
-bidi
-commitlint
-davidanson
-govuk
-jsonschema
+#   myproject
+#   myproject-feature
 myproject
-rbubley
-sirosen
-smartquotes
-texthooks
-sass
-sirosen
-smartquotes
-texthooks
-tmuxp
