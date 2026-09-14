@@ -1,4 +1,5 @@
 {
+  "name": "prototype-has-availability",
   "engines": {
     "node": "22.x",
     "npm": "10.x"
@@ -10,15 +11,9 @@
   },
   "dependencies": {
     "22": "^0.0.0",
-    "@dwp/dwp-frontend": "3.4.0",
-    "@govuk-prototype-kit/common-templates": "2.0.1",
-    "@govuk-prototype-kit/step-by-step": "2.2.4",
-    "@x-govuk/govuk-prototype-filters": "^2.1.0",
-    "govuk-frontend": "5.14.0",
-    "@dwp-govuk/govuk-prototype-kit": "latest"
-  },
-  "overrides": {
-    "qs": "6.14.2",
-    "lodash": "^4.17.23"
+    "@govuk-prototype-kit/common-templates": "3.0.0",
+    "dfe-frontend": "^2.0.1",
+    "govuk-frontend": "6.3.0",
+    "govuk-prototype-kit": "13.20.2"
   }
 }
