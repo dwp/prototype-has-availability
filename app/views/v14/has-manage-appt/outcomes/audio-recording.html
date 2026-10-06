@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Appointment outcome - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-assessment-booked.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+        <form class="form" action="check-answers" method="post">
+
+
+      
+
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+          {{ govukRadios({
+            idPrefix: "appt-audio-record",
+            name: "appt-audio-record",
+            fieldset: {
+              legend: {
+                text: "When did they opt out?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "Before the appointment, as advised by admin",
+                text: "Before the appointment, as advised by admin"
+              },
+              {
+                value: "At the beginning of the appointment, before the consultation started",
+                text: "At the beginning of the appointment, before the consultation started"
+              },
+              {
+                value: "During the consultation, with a partial recording made",
+                text: "During the consultation, with a partial recording made"
+              }
+            ]
+          }) }}
+
+          <br>
+          <br>
+          <div class="govuk-button-group"><button class="govuk-button" data-module="govuk-button">
+              Save and continue
+            </button>
+            <a class="govuk-link" href="../appt-details">Return to appointment details</a>
+          </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

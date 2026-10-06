@@ -15,5 +15,8 @@
     "dfe-frontend": "^2.0.1",
     "govuk-frontend": "6.3.0",
     "govuk-prototype-kit": "13.20.2"
+  },
+  "overrides": {
+    "source-map-js": "1.2.2"
   }
 }

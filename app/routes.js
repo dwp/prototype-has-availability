@@ -1445,3 +1445,40 @@ router.post('/appt-flexi-check14', function (req, res) {
   }
 
 })
+
+
+
+
+router.post('/appt-outcome14', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var apptoutcomecomplete = req.session.data['appt-outcome-complete']
+
+  // Check whether the variable matches a condition
+  if (apptoutcomecomplete == "Yes"){
+    // Send user to what language page
+    res.redirect('/v14/has-manage-appt/outcomes/audio')
+  } else {
+    // Send user to next page
+    res.redirect('/v14/has-manage-appt/outcomes/outcome-reasons')
+  }
+
+})
+
+
+
+router.post('/audio-opt14', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var apptaudioopt = req.session.data['appt-audio-opt']
+
+  // Check whether the variable matches a condition
+  if (apptaudioopt == "Yes"){
+    // Send user to what language page
+    res.redirect('/v14/has-manage-appt/outcomes/audio-recording')
+  } else {
+    // Send user to next page
+    res.redirect('/v14/has-manage-appt/outcomes/check-answers')
+  }
+
+})

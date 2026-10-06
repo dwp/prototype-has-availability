@@ -1,0 +1,218 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Appointment outcome - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-assessment-booked.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+    <form class="form" action="done-page" method="post">
+
+      <h1 class="govuk-heading-l">Check answers</h1>
+
+
+       <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          
+
+          
+        
+    
+      
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+             Was the appointment completed?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  
+                   {% if  data['appt-outcome-complete'] %}
+                  {{ data['appt-outcome-complete'] }}
+                 {% else %}
+             No
+                 {% endif %}
+
+
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="appointment-completed">
+                  Change
+                  </a>
+                </dd>
+              </div>
+
+ {% if (data['appt-outcome-complete'] == "No") %} 
+               <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                What was the outcome?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 
+                
+                
+                 {% if  data['outcomeReason'] %}
+                  {{ data['outcomeReason'] }}
+                 {% else %}
+               Claimant unfit to be assessed due to unacceptable behaviour, suspected alcohol or substance misuse
+                 {% endif %}
+                 
+                 
+                
+                  
+                </dd>
+              
+  
+            <dd class="govuk-summary-list__actions">
+  <a class="govuk-link" href="outcome-reasons">
+                    Change<span class="govuk-visually-hidden"></span>
+                  </a>
+                
+                </dd>
+              </div>
+   {% endif %}
+
+
+   {% if data['outcome-additional-details']  %} 
+               <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+            Additional information
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 
+                
+                
+                
+                  {{ data['outcome-additional-details'] }}
+              
+                 
+                 
+                
+                  
+                </dd>
+              
+  
+            <dd class="govuk-summary-list__actions">
+  <a class="govuk-link" href="outcome-reasons">
+                    Change<span class="govuk-visually-hidden"> any additional information</span>
+                  </a>
+                
+                </dd>
+              </div>
+   {% endif %}
+           
+
+
+          
+          {% if  data['appt-audio-opt'] %}
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Did the claimant opt out of audio recording?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  
+
+                   {% if  data['appt-audio-opt'] %}
+                  {{ data['appt-audio-opt'] }}
+                 {% else %}
+              Yes
+                 {% endif %}
+
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="audio">
+                    Change
+                  </a>
+                </dd>
+              </div>
+
+           
+  
+  
+{% if (data['appt-audio-opt'] == "Yes") %} 
+     
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 Why did they opt out?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                
+                
+                  {% if  data['appt-audio-record'] %}
+                  {{ data['appt-audio-record'] }}
+                 {% else %}
+              At the beginning of the appointment, before the consultation started
+                 {% endif %}
+                 
+                 
+
+                  
+                </dd>
+             <dd class="govuk-summary-list__actions">
+                 <a class="govuk-link" href="audio-recording">
+                    Change
+                  </a> 
+                </dd> 
+              </div>       {% endif %}
+           {% endif %}
+              
+        
+  
+            
+        
+            
+              
+             
+      
+    
+      
+        
+        
+      </dl>
+
+     
+
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button govuk-button" data-module="govuk-button">
+Confirm appointment outcome
+        </button>
+
+       
+
+
+        <a class="govuk-link" href="../appt-details">Cancel</a>
+      </div>
+
+      <br>
+      <br>
+
+  </div>
+
+</div>
+
+</main>
+</div>
+
+{% endblock %}
+
