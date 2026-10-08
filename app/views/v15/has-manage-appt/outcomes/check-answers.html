@@ -125,7 +125,7 @@ Appointment outcome - GOV.UK prototype
           {% if  data['appt-audio-opt'] %}
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
-                  Did the claimant opt in to audio recording?
+                  Did the claimant opt out of audio recording?
                 </dt>
                 <dd class="govuk-summary-list__value">
                   
@@ -148,7 +148,7 @@ Appointment outcome - GOV.UK prototype
            
   
   
-{% if (data['appt-audio-opt'] == "No") %} 
+{% if (data['appt-audio-opt'] == "Yes") %} 
      
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">

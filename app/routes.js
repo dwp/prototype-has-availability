@@ -1473,12 +1473,30 @@ router.post('/audio-opt14', function (req, res) {
   var apptaudioopt = req.session.data['appt-audio-opt']
 
   // Check whether the variable matches a condition
-  if (apptaudioopt == "No"){
+  if (apptaudioopt == "Yes"){
     // Send user to what language page
     res.redirect('/v14/has-manage-appt/outcomes/audio-recording')
   } else {
     // Send user to next page
     res.redirect('/v14/has-manage-appt/outcomes/check-answers')
+  }
+
+})
+
+
+
+router.post('/outcome14', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var outcomeReason = req.session.data['outcomeReason']
+
+  // Check whether the variable matches a condition
+  if (outcomeReason == "Claimant failed to attend"){
+    // Send user to what language page
+    res.redirect('/v14/has-manage-appt/outcomes/check-answers')
+  } else {
+    // Send user to next page
+    res.redirect('/v14/has-manage-appt/outcomes/audio')
   }
 
 })
@@ -1679,12 +1697,29 @@ router.post('/audio-opt15', function (req, res) {
   var apptaudioopt = req.session.data['appt-audio-opt']
 
   // Check whether the variable matches a condition
-  if (apptaudioopt == "No"){
+  if (apptaudioopt == "Yes"){
     // Send user to what language page
     res.redirect('/v15/has-manage-appt/outcomes/audio-recording')
   } else {
     // Send user to next page
     res.redirect('/v15/has-manage-appt/outcomes/check-answers')
+  }
+
+})
+
+
+router.post('/outcome15', function (req, res) {
+
+  // Make a variable and give it the value from page
+  var outcomeReason = req.session.data['outcomeReason']
+
+  // Check whether the variable matches a condition
+  if (outcomeReason == "Claimant failed to attend"){
+    // Send user to what language page
+    res.redirect('/v15/has-manage-appt/outcomes/check-answers')
+  } else {
+    // Send user to next page
+    res.redirect('/v15/has-manage-appt/outcomes/audio')
   }
 
 })

@@ -247,8 +247,11 @@ Prototype page title
                  
                 
               
-           Claimant unfit to be assessed due to unacceptable behaviour, suspected alcohol or substance misuse
-                
+           {% if  data['outcomeReason'] %}
+                  {{ data['outcomeReason'] }}
+                 {% else %}
+               Claimant unfit to be assessed due to unacceptable behaviour, suspected alcohol or substance misuse
+                 {% endif %}       
                   
                 </dd>
               
@@ -293,10 +296,11 @@ Prototype page title
                 <dd class="govuk-summary-list__value">
                   
 
-                   {% if  data['appt-audio-opt'] %}
-                  {{ data['appt-audio-opt'] }}
+          
+                    {% if (data['appt-audio-opt'] == "No") %} 
+                 Yes
                  {% else %}
-              Yes
+            No
                  {% endif %}
 
 
@@ -309,7 +313,7 @@ Prototype page title
            
   
   
-{% if (data['appt-audio-opt'] == "No") %} 
+{% if (data['appt-audio-opt'] == "Yes") %} 
      
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
