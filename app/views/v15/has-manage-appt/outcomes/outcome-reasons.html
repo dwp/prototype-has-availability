@@ -1,0 +1,244 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Cancel appointment - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-assessment-booked.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+    <form class="form" action="audio" method="post">
+   
+      <h1 class="govuk-heading-l" style="padding-top:10px;">
+      Why was the appointment not completed?
+      
+     
+      </h1>
+    
+     
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="outcomeReason-1" name="outcomeReason" type="radio" value="Claimant failed to attend">
+              <label class="govuk-label govuk-radios__label" for="outcomeReason-1">
+     Claimant failed to attend
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="outcomeReason-2" name="outcomeReason" type="radio" value=" Claimant would not wait up to 30 minutes">
+              <label class="govuk-label govuk-radios__label" for="outcomeReason-2">
+           Claimant would not wait up to 30 minutes
+              </label>
+            </div>
+           
+          
+          <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="outcomeReason-3" name="outcomeReason" type="radio" value="Claimant could not wait more than 30 minutes">
+              <label class="govuk-label govuk-radios__label" for="outcomeReason-3">
+     Claimant could not wait more than 30 minutes
+              </label>
+            </div>
+
+
+         <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="outcomeReason-4" name="outcomeReason" type="radio" value="Claimant declined the consultation">
+              <label class="govuk-label govuk-radios__label" for="outcomeReason-4">
+             Claimant declined the consultation
+              </label>
+            </div> 
+
+
+           
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-5" name="outcomeReason" type="radio" value="Claimant left before being seen">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-5">
+              Claimant left before being seen
+                </label>
+              </div>
+                  <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-6" name="outcomeReason" type="radio" value="Claimant arrived too late">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-6">
+       Claimant arrived too late
+                </label>
+              </div>  
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-7" name="outcomeReason" type="radio" value="Special requirements not declared">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-7">
+           Special requirements not declared
+                </label>
+              </div>
+             
+
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-8" name="outcomeReason" type="radio" value="Claimant failed identity checks">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-8">
+      Claimant failed identity checks
+                </label>
+              </div>
+             
+            
+
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-9" name="outcomeReason" type="radio" value="Claimant unfit to be assessed due to unacceptable behaviour, suspected alcohol or substance misuse">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-9">
+          Claimant unfit to be assessed due to unacceptable behaviour, suspected alcohol or substance misuse
+                </label>
+              </div>
+             
+            
+
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-10" name="outcomeReason" type="radio" value="Claimant not with appropriate appointee">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-10">
+           Claimant not with appropriate appointee
+                </label>
+              </div>
+             
+            
+
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-11" name="outcomeReason" type="radio" value="Claimant unwell or had an emergency">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-11">
+           Claimant unwell or had an emergency 
+                </label>
+              </div>
+             
+            
+
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-12" name="outcomeReason" type="radio" value="Accommodation problem outside provider control">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-12">
+          Accommodation problem outside provider control
+                </label>
+              </div>
+             
+            
+
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-13" name="outcomeReason" type="radio" value="Accommodation problem within provider control">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-13">
+    Accommodation problem within provider control
+                </label>
+              </div>
+             
+            
+
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-14" name="outcomeReason" type="radio" value="HAS system failure">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-14">
+          HAS system failure 
+                </label>
+              </div>
+             
+            
+
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-15" name="outcomeReason" type="radio" value="Assessment provider technical failure">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-15">
+          Assessment provider technical failure
+                </label>
+              </div>
+             
+            
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-16" name="outcomeReason" type="radio" value="HCP unable to complete consultation">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-16">
+          HCP unable to complete consultation
+                </label>
+              </div>
+             
+            
+
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-17" name="outcomeReason" type="radio" value="Special requirements declared but not met">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-17">
+           Special requirements declared but not met 
+                </label>
+              </div>
+             
+            
+
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-18" name="outcomeReason" type="radio" value="More claimants than capacity">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-18">
+          More claimants than capacity 
+                </label>
+              </div>
+             
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="outcomeReason-19" name="outcomeReason" type="radio" value="HCP unavailable for appointment">
+                <label class="govuk-label govuk-radios__label" for="outcomeReason-19">
+        HCP unavailable for appointment 
+                </label>
+              </div>
+            
+            <br>
+          
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
+        <div class="govuk-form-group">
+          <label class="govuk-heading-s" for="action">
+           Provide more details 
+          </label>
+    
+          <textarea class="govuk-textarea govuk-js-character-count" id="action" name="outcome-additional-details" rows="5" aria-describedby="action-info"></textarea>
+          
+          
+        </div>
+      </div>
+
+           
+
+            </div>
+
+
+          </div>
+        </fieldset>
+      
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button govuk-button" data-module="govuk-button">
+   Save and continue
+        </button>
+
+
+
+        <a class="govuk-link" href="../appt-details">Return to appointment details</a>
+      </div>
+
+      <br>
+      <br>
+
+  </div>
+
+</div>
+
+</main>
+</div>
+
+
+
+
+{% endblock %}
+

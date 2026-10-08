@@ -110,8 +110,7 @@ Prototype page title
                 </dt>
                 <dd class="govuk-summary-list__value">
                 
-                Face to face
-                 
+                Telephone 
         
                  
                  
@@ -155,10 +154,7 @@ Prototype page title
                  Wednesday 7 May 2026 at 9:15am
                 </dd>
                 <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="resched-date-time">
-                    Change<span class="govuk-visually-hidden">appointment date and time</span>
-                  </a>
-              
+             
                 </dd>
               </div>
         
@@ -184,9 +180,7 @@ Prototype page title
               
   
                 <dd class="govuk-summary-list__actions">
-  <a class="govuk-link" href="assign-hcp-while-booking">
-                    Change<span class="govuk-visually-hidden"> any additional information</span>
-                  </a>
+  
                 
                 </dd>
               </div>
@@ -212,25 +206,10 @@ Prototype page title
                 </dd>
               </div>
 
-                   <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Audio recording
-                </dt>
-                <dd class="govuk-summary-list__value">
-                 
-                
               
-                No
-                
+
+
                   
-                </dd>
-              
-  
-                <dd class="govuk-summary-list__actions">
-  
-                
-                </dd>
-              </div>
 
                    <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -238,9 +217,13 @@ Prototype page title
                 </dt>
                 <dd class="govuk-summary-list__value">
                  
-                
-              
-         Failed 
+                  {% if (data['appt-outcome-complete'] == "Yes") %} 
+                  Complete
+                 {% else %}
+            Failed
+                 {% endif %}
+                 
+               
                 
                   
                 </dd>
@@ -253,6 +236,8 @@ Prototype page title
                   </a>
                 </dd>
               </div>
+
+               {% if (data['appt-outcome-complete'] == "No") %} 
 
                  <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -272,10 +257,86 @@ Prototype page title
   
                 
                 </dd>
-              </div>
-  
+              </div> {% endif %}
+
+              {% if data['outcome-additional-details']  %} 
+               <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+           Further information
+                </dt>
+                <dd class="govuk-summary-list__value">
+                 
+                
+                
+                
+                  {{ data['outcome-additional-details'] }}
               
-            
+                 
+                 
+                
+                  
+                </dd>
+              
+  
+            <dd class="govuk-summary-list__actions">
+                
+                </dd>
+              </div>
+   {% endif %}
+
+    
+          {% if  data['appt-audio-opt'] %}
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Audio recording
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  
+
+                   {% if  data['appt-audio-opt'] %}
+                  {{ data['appt-audio-opt'] }}
+                 {% else %}
+              Yes
+                 {% endif %}
+
+
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                
+                </dd>
+              </div>
+
+           
+  
+  
+{% if (data['appt-audio-opt'] == "No") %} 
+     
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                 When did they opt out?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                
+                
+                  {% if  data['appt-audio-record'] %}
+                  {{ data['appt-audio-record'] }}
+                 {% else %}
+              At the beginning of the appointment, before the consultation started
+                 {% endif %}
+                 
+                 
+
+                  
+                </dd>
+             <dd class="govuk-summary-list__actions">
+               
+                </dd> 
+              </div>       {% endif %}
+           {% endif %}
+
+
+  
+             
               
             </dl>
 

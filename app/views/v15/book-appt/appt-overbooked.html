@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+
+
+{% block pageTitle %}
+Appointment type - GOV.UK prototype
+{% endblock %}
+
+{% block header %}
+
+  {% include "includes/blue-banner-book-assessment.html" %}
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" style="margin-top: -40px;">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+        <form class="form" action="check-answers" method="post">
+
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+          {{ govukRadios({
+            idPrefix: "appt-overbooked-check",
+            name: "appt-overbooked-check",
+            fieldset: {
+              legend: {
+                text: "Should this appointment have an overbooked slot?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "Yes",
+                text: "Yes"
+              },
+              {
+                value: "No",
+                text: "No"
+              },
+              {
+                value: "Not known",
+                text: "Not known"
+              }
+            ]
+          }) }}
+
+          <br>
+          <br>
+          <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+            <a class="govuk-link" href="claimant-detail">Cancel</a>
+          </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
